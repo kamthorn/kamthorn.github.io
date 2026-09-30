@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kamthorn Krairaksa · Projects</title>
+<meta name="description" content="โปรเจกต์โอเพนซอร์สของ Kamthorn Krairaksa: เครื่องมือประมวลผลภาษาไทย, OpenSearch และข้อมูลจังหวัดของไทย">
+<style>
+:root{--bg:#fafaf7;--fg:#1c1c1a;--muted:#62625c;--card:#fff;--line:#e4e3dc;--accent:#0b6b5c;--tag:#eef3f0}
+@media(prefers-color-scheme:dark){:root{--bg:#141514;--fg:#ececE6;--muted:#9a9a92;--card:#1c1d1b;--line:#2d2e2b;--accent:#5fd0b8;--tag:#232725}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,"Segoe UI","Noto Sans Thai",sans-serif}
+main{max-width:920px;margin:0 auto;padding:48px 16px 64px}
+h1{font-size:2rem;margin:0 0 4px}
+.sub{color:var(--muted);margin:0 0 8px}
+.links a{color:var(--accent);margin-right:16px;text-decoration:none}
+.links a:hover{text-decoration:underline}
+h2{font-size:1.15rem;margin:40px 0 12px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.card h3{margin:0;font-size:1.05rem}
+.card h3 a{color:var(--fg);text-decoration:none}
+.card h3 a:hover{color:var(--accent)}
+.card p{margin:0;color:var(--muted);font-size:.93rem;flex:1}
+.meta{display:flex;flex-wrap:wrap;gap:6px}
+.tag{background:var(--tag);border-radius:999px;padding:1px 10px;font-size:.78rem;color:var(--muted)}
+.cta{display:flex;gap:14px;font-size:.9rem}
+.cta a{color:var(--accent);text-decoration:none}
+.cta a:hover{text-decoration:underline}
+footer{margin-top:48px;color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+<main>
+  <h1>Kamthorn Krairaksa</h1>
+  <p class="sub">NECTEC · กรุงเทพฯ · โปรเจกต์ที่ผมดูแลอยู่ โดยเฉพาะงานด้านภาษาไทยและการค้นหา</p>
+  <p class="links">
+    <a href="https://github.com/kamthorn">GitHub</a>
+    <a href="http://blog.kamthorn.org/">Blog</a>
+  </p>
+
+  <h2>ตัดคำภาษาไทย (ThaiBreak)</h2>
+  <div class="grid">
+    <article class="card">
+      <h3><a href="https://github.com/kamthorn/thai-break">thai-break</a></h3>
+      <p>ตัดคำและตัดแบ่งบรรทัดภาษาไทยด้วย Viterbi + TCC รองรับหลายภาษา: PHP, Go, TypeScript, Rust, C/C++, Python, WebAssembly</p>
+      <div class="meta"><span class="tag">Apache-2.0</span><span class="tag">npm</span><span class="tag">PyPI</span><span class="tag">crates.io</span><span class="tag">Packagist</span></div>
+      <div class="cta"><a href="https://github.com/kamthorn/thai-break">ซอร์สโค้ด</a><a href="https://www.npmjs.com/package/thai-break">npm</a></div>
+    </article>
+    <article class="card">
+      <h3><a href="https://kamthorn.github.io/thai-break-demo/">thai-break-demo</a></h3>
+      <p>หน้าเว็บทดลองตัดคำและหาจุดตัดบรรทัดในเบราว์เซอร์ อัปโหลดพจนานุกรมของตัวเองได้ ข้อมูลไม่ถูกส่งออกนอกเครื่อง</p>
+      <div class="meta"><span class="tag">JavaScript</span><span class="tag">Live demo</span></div>
+      <div class="cta"><a href="https://kamthorn.github.io/thai-break-demo/">เปิดเดโม</a><a href="https://github.com/kamthorn/thai-break-demo">ซอร์สโค้ด</a></div>
+    </article>
+    <article class="card">
+      <h3><a href="https://github.com/kamthorn/thai-break-dict-extra">thai-break-dict-extra</a></h3>
+      <p>พจนานุกรมเสริมสำหรับตัดคำไทย แยกเป็น 15 หมวด 39 ไฟล์ (TXT, TSV, DAWG) เพิ่มความแม่นยำกับคำเฉพาะทางและชื่อเฉพาะ</p>
+      <div class="meta"><span class="tag">CC0-1.0</span><span class="tag">Dictionary</span></div>
+      <div class="cta"><a href="https://github.com/kamthorn/thai-break-dict-extra">ซอร์สโค้ด</a></div>
+    </article>
+  </div>
+
+  <h2>OpenSearch</h2>
+  <div class="grid">
+    <article class="card">
+      <h3><a href="https://github.com/kamthorn/opensearch-analysis-thaibreak">opensearch-analysis-thaibreak</a></h3>
+      <p>ปลั๊กอินวิเคราะห์ภาษาไทยสำหรับ OpenSearch ใช้เอนจิน Viterbi + TCC พจนานุกรม 51,858 คำ รองรับ user dictionary และ Docker image</p>
+      <div class="meta"><span class="tag">Java</span><span class="tag">Apache-2.0</span><span class="tag">Docker</span></div>
+      <div class="cta"><a href="https://github.com/kamthorn/opensearch-analysis-thaibreak">ซอร์สโค้ด</a><a href="https://github.com/kamthorn/opensearch-analysis-thaibreak/releases">Releases</a></div>
+    </article>
+    <article class="card">
+      <h3><a href="https://github.com/kamthorn/opensearch-thai-best-practices">opensearch-thai-best-practices</a></h3>
+      <p>คู่มือและตัวอย่างค่าตั้งระดับ production สำหรับภาษาไทยบน OpenSearch: normalization, stopwords/synonyms, collation และ hybrid search (BM25 + k-NN ด้วย RRF)</p>
+      <div class="meta"><span class="tag">Guide</span><span class="tag">Shell</span></div>
+      <div class="cta"><a href="https://github.com/kamthorn/opensearch-thai-best-practices">ซอร์สโค้ด</a></div>
+    </article>
+  </div>
+
+  <h2>ข้อมูลเปิด</h2>
+  <div class="grid">
+    <article class="card">
+      <h3><a href="https://thailand-provinces.vercel.app">thailand-provinces</a></h3>
+      <p>รายชื่อจังหวัด อำเภอ ตำบล และรหัสไปรษณีย์ของไทยเป็น static JSON พร้อมไลบรารีเล็กๆ ไม่มี dependency สำหรับทำฟอร์มที่อยู่</p>
+      <div class="meta"><span class="tag">JavaScript</span><span class="tag">JSON</span><span class="tag">Live demo</span></div>
+      <div class="cta"><a href="https://thailand-provinces.vercel.app">เปิดเดโม</a><a href="https://github.com/kamthorn/thailand-provinces">ซอร์สโค้ด</a></div>
+    </article>
+  </div>
+
+  <footer>รายการนี้เลือกเฉพาะโปรเจกต์ที่ยังมีการอัปเดตล่าสุด ดูทั้งหมดที่ <a href="https://github.com/kamthorn?tab=repositories" style="color:var(--accent)">GitHub</a></footer>
+</main>
+</body>
+</html>
